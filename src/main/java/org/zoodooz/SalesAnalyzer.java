@@ -17,4 +17,13 @@ public class SalesAnalyzer {
                 .orElse(0d);
 
     }
+    public double avgSaleEachWeek(){
+        double sale = 0;
+        for (int i = 0; i < amounts.size(); i++){
+            sale += amounts.get(i);
+        }
+
+        return sale / amounts.size();
+    }
+
 }

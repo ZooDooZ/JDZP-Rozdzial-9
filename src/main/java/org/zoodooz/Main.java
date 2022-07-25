@@ -21,7 +21,10 @@ public class Main {
                 doubles.add(Double.parseDouble(s));
             }
             SalesAnalyzer salesAnalyzer = new SalesAnalyzer(doubles);
-            System.out.printf("Lączna wartość sprzedaży z tygodnia: %.2f złotych\n" ,salesAnalyzer.getSum());
+            System.out.printf("Lączna wartość sprzedaży z tygodnia: %.2f złotych.\n" ,salesAnalyzer.getSum());
+            System.out.printf("Średnia dzienna wartość sprzedaży z każdego tygodnia: %.2f złotych.\n",
+                    salesAnalyzer.avgSaleEachWeek());
+            System.out.println();
         }
 
 
