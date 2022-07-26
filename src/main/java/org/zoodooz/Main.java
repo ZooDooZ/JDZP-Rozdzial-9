@@ -14,10 +14,24 @@ public class Main {
         File file = new File(name);
         Scanner openFile = new Scanner(file);
 
-        Counter counter = new Counter(openFile);
+        int numberOfWordsPerLine = 0;
+        int totalNumberOfWords = 0;
+        int counter = 0;
 
+        while(openFile.hasNext()){
+            counter++;
+            numberOfWordsPerLine = 0;
+            String str = openFile.nextLine();
+            char[] array = str.toCharArray();
+            for(int i = 0; i < array.length; i++) {
+                if (Character.isSpaceChar(array[i])){
+                    numberOfWordsPerLine++;
+                }
+            }
+            totalNumberOfWords += numberOfWordsPerLine;
+        }
 
-        System.out.println("Liczba słów w podanym pliku wynosi: " + counter.getNumberOfWords());
+        System.out.println("Liczba słów w podanym pliku wynosi: " + (totalNumberOfWords + counter));
 
     }
 }

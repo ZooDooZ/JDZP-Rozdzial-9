@@ -1,0 +1,3 @@
+Napisz program, który wyświetla prośbę o wpisanie serii jednocyfrowych liczb bezżadnego separatora.
+Program powinien wyświetlać sumę wszystkich tych jednocyfrowych liczb z łańcucha znaków.
+Na przykład jeśli użytkownik wpisał.
