@@ -14,12 +14,22 @@ public class Main {
         Scanner scanner  = new Scanner(file);
 
         double totalSum = 0;
+
         int counter = 0;
+
+        double lowest = Integer.MAX_VALUE;
         int numberLowestWeek = 0;
+        int lowFlag = 0;
+
+        double highest = Integer.MIN_VALUE;
         int numberHighestWeek = 0;
+        int highFlag = 0;
+
 
         while(scanner.hasNext()){
             counter++;
+            lowFlag++;
+            highFlag++;
             String str = scanner.nextLine();
             List<String> strings = Arrays.asList(str.split(","));
             List<Double> doubles = new ArrayList<>();
@@ -33,13 +43,25 @@ public class Main {
                     " wynosi: %.2f złotych.\n", salesAnalyzer.getAvgSaleEachDay());
             totalSum += salesAnalyzer.getAllTotalSum();
 
-            numberHighestWeek = SalesAnalyzer.getNumberWithHighestWeek();
-            numberLowestWeek = SalesAnalyzer.getNumberWithLowestWeek(doubles);
+            for(int i = 0; i < doubles.size();i++){
+                if(doubles.get(i) < lowest){
+                    lowest = doubles.get(i);
+                    numberLowestWeek = lowFlag;
+                }
+            }
+
+            for(int i = 0; i < doubles.size(); i++){
+                if(doubles.get(i) > highest){
+                    highest = doubles.get(i);
+                    numberHighestWeek = highFlag;
+                }
+            }
+
         }
         System.out.printf("Lączna wartość sprzedaży ze wszystkich tygodni wynosi: %.2f złotych.\n",totalSum);
         System.out.printf("Średnia tygodniowa wartość sprzedaży wynosi: %.2f złotych.\n",(totalSum/counter));
-        System.out.println("Numer tygodnia z najwyższa wartościa sprzedaży jest tydzień nr: " + numberHighestWeek);
-        System.out.println("Numer tygodnia z najnizszą wartościa sprzedaży jest tydzień nr: " + numberLowestWeek);
+        System.out.println("Numer tygodnia z najwyższą wartością sprzedaży jest tydzień nr: " + numberHighestWeek);
+        System.out.println("Numer tygodnia z najnizszą wartością sprzedaży jest tydzień nr: " + numberLowestWeek);
 
 
 
