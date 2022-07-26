@@ -2,7 +2,6 @@ package org.zoodooz;
 
 public class Main {
     public static void main(String[] args) {
-        
             //#1
             String str = "Napisz klasę zawierającą następujące metody statyczne";
             System.out.println("Liczba słów znajdująca sie w obiekcie wynosi: " + Operations.wordCount(str));
