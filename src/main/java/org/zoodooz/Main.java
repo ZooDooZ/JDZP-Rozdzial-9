@@ -9,13 +9,13 @@ public class Main {
             char[] array = {'F','i','l','i','p'};
             System.out.println("Metoda zwraca znaki z tablicy w formie łańcucha znaków: " + Operations.arrayToString(array));
             //#3
-//        String str1 = "Siemanko, co u Ciebie?";
-//        Operations.mostFrequent(str1);
-            //#4
-//            String string1 = "dwa psy i dwa koty";
-//            String string2 = "dwa";
-//            String string3 = "cztery";
-//
-//            Operations.replaceSubstring(string1, string2, string3);
+//            String str1 = "Siemanko, co u Ciebie?";
+//            System.out.println("Najczęściej występujący znak w tym obiekcie to: " + Operations.mostFrequent(str1));
+        //#4
+            String string1 = "dwa psy i dwa koty";
+            String string2 = "dwa";
+            String string3 = "cztery";
+
+            System.out.println(Operations.replaceSubstring(string1, string2, string3));
     }
 }
