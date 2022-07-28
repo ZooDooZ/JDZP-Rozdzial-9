@@ -10,8 +10,6 @@ public class Main {
         String sentence = keyboard.nextLine();
 
         Translator translator = new Translator();
-        translator.swineLatinTranslator(sentence);
-
-
+        System.out.println(translator.swineLatinTranslator(sentence));
     }
 }
