@@ -11,14 +11,11 @@ public class Main {
         File file = new File("pbnumbers.txt");
         Scanner scanner = new Scanner(file);
 
-        while(scanner.hasNext()){
-//            System.out.println(scanner.nextLine());
-            String[] tokens = scanner.nextLine().split("");
+        Statistic statistic = new Statistic();
 
-            for(int i = 0; i < tokens.length; i++){
-                System.out.println(tokens[i]);
-            }
-            System.out.println();
+        while(scanner.hasNext()){
+            String[] tokens = scanner.nextLine().split(" ");
+            
         }
 
     }
