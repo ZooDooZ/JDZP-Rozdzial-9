@@ -15,7 +15,7 @@ public class Main {
 
         while(scanner.hasNext()){
             String[] tokens = scanner.nextLine().split(" ");
-            
+
         }
 
     }
